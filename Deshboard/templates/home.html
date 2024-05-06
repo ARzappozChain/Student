@@ -1,0 +1,2283 @@
+{% extends "base.html" %} {% load static %} {% load embed_video_tags %} {% block blockname %}
+
+
+<!-- all css code  -->
+
+<!-- 2. Banner css code  -->
+<style>
+  .fullbanner{
+
+    padding-top: 100px;
+    padding-bottom: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+.bannerptxt{
+  color: white;
+  font-size: 23px;
+  padding-top:30px
+}
+
+
+
+
+
+.banner1{
+    margin-top: 100px;
+   
+    margin: 3px auto;
+}
+
+.eLarning{
+    padding-top: 30px;
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+
+.buttonclass{
+    padding-top: 100px;
+    justify-content: center;
+   
+    display: flex;
+}
+
+
+.button1{
+    
+    height: 80px;
+    width: 150px;
+    font-weight: 400;
+    justify-content: center;
+    margin: none;
+    border: none;
+    border: 3px solid rgb(40, 41, 90);
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: 400;
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    
+    
+
+}
+
+.button1:hover{
+    
+  height: 80px;
+  width: 150px;
+  font-weight: 400;
+  justify-content: center;
+  margin: none;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to left bottom, rgb(35, 118, 173), rgb(160,32,240));
+  font-size: 22px;
+  font-weight: 200;
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+
+}
+.abuttontype1{
+ 
+  margin-right: 10px;
+}
+.abuttontype2{
+margin-left: 10px;
+padding-bottom: 20px;
+}
+
+
+
+.videopart{
+  border-radius: 25px;
+}
+
+
+/* right part */
+
+
+.bannervideo{
+   
+    padding-top: 70px;
+    flex-basis: 60%;
+    min-width: 40px;
+    padding-left: 50px;
+}
+.bannersecvid{
+  margin: auto;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  
+}
+.playbutton{
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  
+}
+
+.bannervidimg{
+  width: 100%;
+  height: 500px;
+  
+}
+.videosecplayer{
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  display: none;
+  
+  
+  
+}
+
+.closebutton{
+  height: 100px;
+  width: 100px;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 2%;
+  right: 15px;
+  cursor: pointer;
+}
+
+</style>
+
+<!-- 3. Cattegory Css Code  -->
+
+
+<style>
+  .categorydiv{
+    
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  #carouselExampleControls{
+    padding: 70px;
+  }
+
+  .carousel-inner {
+    padding: 1em;
+  }
+  .card1 {
+    border-radius: 25px;
+    background: linear-gradient(to left bottom, rgb(103, 87, 175), white);
+   
+    height: 200px;
+    width: 205px;
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(82, 82, 99, 0.18);
+    border: none;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    .carousel-item {
+      margin-right: 0;
+     
+      display: block;
+    }
+    .carousel-inner {
+      display: flex;
+    }
+  }
+  .card1 .img-wrapper {
+      
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .card1 img {
+      max-height: 100%;
+  }
+  @media (max-width: 767px) {
+    .card1 .img-wrapper {
+      height: 17em;
+    }
+  }
+
+  .cattegoryimgsize{
+    height: 50px;
+    width: 50px;
+    
+  }
+
+  .categoryingrapperdiv{
+    padding-top: 20px;
+  }
+
+  .categorycardbody{
+    padding: 10px;
+    text-align: center;
+  }
+
+.textdeceration{
+  text-decoration: none;
+  color: black;
+}
+
+</style>
+
+
+<!-- 4. All Category Css Code  -->
+
+<style>
+  .allcourse{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+  }
+
+  .carousel{
+    padding-left: 200px;
+    padding-left: 50px;
+    padding-right: 60px;
+  }
+  .allcouresunder{
+   
+    border-radius: 25px;
+  }
+  
+  .allcoursebanner{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+  }
+  
+
+  .firstinner {
+    padding: 1em;
+  }
+  .allcatcard {
+    border-radius: 25px;
+    height: 550px;
+    width: 400px;
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+  }
+  .coursefeediv{
+    padding-left: 20px; 
+    padding-bottom: 10px;
+  }
+  .buttondiv{
+    padding-left: 50px;
+  }
+  .controlprev,
+  .controlnxt {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    .carousel1 {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+    .carousel-inner {
+      display: flex;
+    }
+  }
+  .card .img-wrapper {
+      max-width: 100%;
+      height: 13em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+ 
+  @media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 17em;
+    }
+  }
+
+.images{
+  width: 100%;
+  height: 55%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+  .fontsize{
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+  }
+  .reviews{
+    font-size: 20px;
+  }
+
+  .loremtext{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 25px;
+    color: rgb(218, 204, 214);
+    
+  }
+
+  .cardbuttonborder{
+    border: 3px solid #35033a;
+    color: #590a69;
+    
+  }
+  .cardbuttonborder:hover{
+    border: none;
+    background: #35033a;
+    color: #ebe3ec;
+    
+    
+  }
+  .AllCourses{
+    color: #e16812;
+  }
+.cattegoytype{
+  padding-bottom: 20px;
+
+}
+.coursefee{
+  padding-left: 100px
+
+}
+.atag{
+  border-radius: 25px;
+
+}
+.margin{
+  margin-left:50px;
+  margin-right: 50px;
+}
+.border{
+  border-bottom: 2px solid gray;
+  
+}
+
+.allcoursebtn{
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+}
+
+.scrollable-tabs-container a.active {
+  border-bottom: 5px solid #0d0d0e; /* Adjust as needed */
+}
+
+
+.scorllspayfulldiv{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.scrollable-tabs-container {
+  font-family: "Roboto", sans-serif;
+  background: transparent ;
+  margin: 16px auto;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollable-tabs-container svg {
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 50%;
+  pointer-events: auto; 
+}
+
+.scrollable-tabs-container ul {
+  display: flex;
+  gap: 16px;
+  
+  margin: 0;
+  list-style: none;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.scrollable-tabs-container ul.dragging a {
+  pointer-events: none;
+}
+
+.scrollable-tabs-container ul.dragging {
+  scroll-behavior: auto;
+}
+
+.scrollable-tabs-container ul::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable-tabs-container a {
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 24px;
+  display: inline-block;
+  border-radius: 4px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.scrollable-tabs-container a.active {
+  color: #fcfcfc;
+}
+
+.scrollable-tabs-container .right-arrow,
+.scrollable-tabs-container .left-arrow {
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  top: 0;
+  display: none;
+  align-items: center;
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+.acctive1{
+font-size: 27px;
+background: transparent;
+}
+
+.scrollable-tabs-container .right-arrow.active,
+.scrollable-tabs-container .left-arrow.active {
+  display: flex;
+}
+
+.scrollable-tabs-container .right-arrow {
+  right: 0; 
+  justify-content: flex-end;
+}
+
+
+
+.scrollable-tabs-container svg:hover {
+  background: #333;
+}
+
+.scrollpayul{
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* Style for dragging */
+.scrollable-tabs-container ul.sortable-ghost {
+opacity: 0.5; /* Adjust opacity as needed */
+}
+
+/* Additional styling for sorting */
+.scrollable-tabs-container ul.sortable-drag {
+background-color: #f0f0f0; /* Adjust background color as needed */
+}
+
+.scrollable-tabs-container ul.sortable-chosen {
+background-color: #e0e0e0; /* Adj ust background color as needed */
+}
+
+.coursename{
+text-decoration: none;
+color:rgb(92, 90, 90);
+}
+
+
+</style>
+
+
+
+<!-- 5. Our Special Service Css Code  -->
+
+<style>
+  .ourspeser{
+    padding-left:100px ;
+    padding-right: 100px;
+    padding-bottom: 100px;
+  }
+  .servicesecdiv{
+  background: transparent;
+  border-radius: 25px;
+  padding-bottom: 50px;
+  }
+  .ourh1{
+    font-size: 60px;
+    color: white;
+  }
+  .ourp{
+    font-size: 30px;
+    color: #c6c8ca;
+  }
+  .ourvideo{
+    
+    border-radius: 25px;
+  }
+  .ourspili{
+    width: 500px; 
+    background-color: black;
+    border: none;
+    
+  }
+  
+  .spicialserv{
+    padding-top: 60px;
+    
+  }
+  .spicialservdiv{
+    width: 95%;
+    margin: auto;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .joinplay{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+  }
+  .spicialservimg{
+    height: 500px;
+    width: 100%;
+  }
+  .servicevid{
+    width: 90%;
+    position: fixed;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999; /* Ensure it appears on top of other content */
+    }
+  
+    .serciceclosebutton{
+      height: 70px;
+      width: 70px;
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      cursor: pointer;
+    }
+    
+    .ourstuultxt{
+     
+      color: white;
+      text-align: center;
+    }
+    .ourstuultxt:hover{
+    color: rgb(96, 141, 236);
+    text-align: center;
+    }
+  
+    .ourspili{
+      width: 400px; 
+      background-color: rgba(25, 69, 95, 0.753);
+      border: none;
+      border-radius: 25px;
+      
+      
+    }
+    .ourspili:hover{
+      width: 500px; 
+      background-color: rgb(40, 17, 41);
+      border: none;
+      border-radius: 10px;
+      border-bottom: 5px solid rgb(71, 29, 148);
+      
+    }
+  
+</style>
+
+
+<!-- 6.Category Wise Show Css Code  -->
+
+<style>
+
+  .categorywiseshowcarddiv{
+    border-radius: 25px;
+      height: 550px;
+      width: 400px;
+      margin: 0 0.5em;
+      box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+      border: none;
+  }
+  
+    .card-img-top{
+  
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+  
+    }
+  .categorydiv{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .cattegoryh1{
+    font-size: 55px;
+    color: #747474;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    font-weight: 700;
+  }
+  .wiseshowcoursefee{
+    padding-left: 20px; 
+    padding-bottom: 20px
+  }
+  .wiseshowpurchescor{
+    padding-left: 50px; 
+  
+  }
+  
+  .wiseshowcard{
+    padding: 20px;
+  }
+  .cattegorywiseh1{
+    color: white;
+  }
+  .catbutton{
+    width: 250px;
+    height: 70px;
+    font-size: 30px;
+    border: 3px solid rgb(74, 152, 224);
+    border-radius: 15px;
+    font-weight: 500;
+    background: transparent;
+    color: white;
+    
+  }
+  .catbutton:hover{
+    width: 300px;
+    height: 80px;
+    font-size: 35px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 500;
+    background: linear-gradient( to left bottom, rgb(87, 124, 194), rgb(61, 23, 97));
+    color: rgb(40, 134, 119);
+    
+  }
+  
+  .categorybutton{
+  padding-left: 630px;
+  
+  }
+  .catbuttonhole{
+  align-items: center;
+  padding-top: 50px;
+  justify-content: center;
+  }
+  
+  .cardcoursename{
+    color: rgb(41, 40, 40);
+    text-decoration: none;
+  }
+  
+  
+</style>
+
+
+<!-- 7. Join Free Seminer Css Code  -->
+
+<style>
+  .seminerjoinpart{
+    padding-top: 200px;
+    padding: 100px;
+    
+  }
+  
+  
+    .fisrsth1{
+      font-size: 58px;
+      color: white;
+      padding-left: 50px;
+      font-weight: 700;
+    }
+  .joinsecondbody{
+    background: linear-gradient(to left bottom, rgb(216, 211, 211), rgb(59, 59, 59),rgb(139, 25, 139), );
+    border-radius: 25px;
+  }
+  
+  .joinp{
+    font-size: 23px;
+    padding-bottom: 25px;
+    color:white; 
+  }
+  .textfirstdiv{
+    padding: 50px;
+  }
+  .firstli{
+    display: -webkit-box; 
+    width: 600px;
+    background-color: #4c4e9c;
+    border: none;
+    
+  }
+  
+  .firstli:hover{
+    display: -webkit-box; 
+    width: 600px;
+    background: linear-gradient( to left bottom, rgba(99, 31, 93, 0.849),rgba(11, 90, 121, 0.767));
+    border: none;
+    
+  }
+  
+  
+  .underdiv{
+    border-radius: 15px; 
+    width: 450px;
+    background-color: #16263a;
+  }
+  .underdivbutton{
+    padding-left: 100px; 
+    padding-top: 5px;
+    background-color: 2px solid #08143d ;
+  }
+  .seminerimgdiv{
+    padding-top: 70px;
+    padding-left: 50px;
+  }
+  .seminerimg{
+    border-radius: 30px;
+    height: 500px; 
+    width: 95%;
+  }
+  
+  .unersembutton{
+    width: 90px;
+    border: 2px rgb(55, 38, 100);
+  }
+  
+  .seminerholebutton{
+    padding-top: 30px;
+  }
+  .semminerbutton{
+    border-radius: 20px;
+    border: 3px solid rgb(55, 38, 100);
+    height: 65px;
+    width: 300px;
+    color: white;
+    
+  }
+  .semminerbutton:hover{
+    background: linear-gradient(to left bottom,#2297ce,rgb(35, 35, 175));
+      color: black;
+      border: none;
+  }
+  .seminerbuttonp{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .firstlitext{
+    color: white;
+  }
+  
+  
+  
+  
+  .unersembutton{
+    background-color:#08143d; 
+    color:white;
+  }
+  .unersembutton:hover{
+    background-color:#2142ac; 
+    color:white;
+  }
+  .textpartjoin{
+    padding-left: 50px;
+    padding-top: 30px;
+   
+  }
+  
+  </style>
+
+
+  <!-- 8. Institute Banner Css Code -->
+
+  <style>
+    .instbanner{
+  
+       
+      background: transparent;
+  
+    }
+  .bannerh1{
+    font-size: 60px;
+    color: #08143d;
+    padding-bottom: 30px ;
+  }
+  .bannerstatic{
+    height: 500px; 
+    width: 98%;
+    border-radius: 25px;
+    
+    
+    
+  
+  }
+  .bannerdiv{
+    padding: 50px; 
+    padding-bottom: 50px
+  }
+  
+  .bannerfull{
+    justify-content: center;
+  
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+  }
+  
+  .instbanner{
+    border-radius: 25px;
+  }
+  .intright{
+    text-align: right;
+    padding-top: 50px; 
+    
+  
+  }
+  
+  .intleft{
+    padding-top: 50px; 
+  }
+  
+  
+  .intp{
+    font-size: 20px;
+    color: white;
+  }
+  
+  
+  </style>
+
+
+<!-- 9. Success History Css Code -->
+
+<style>
+  .successfulldiv{
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 100px;
+
+  }
+.successtextpart{
+  padding-bottom: 50px;
+  text-align: center;
+}
+.successtextparth1{
+  font-size: 60px;
+  color: white;
+}
+
+.successtextpartp{
+  padding-top: 50px; 
+  padding-left: 150px; 
+  padding-right: 150px;
+  font-size: 25px;
+  color: white;
+}
+.successvideohole{
+  padding-top: 40px; 
+  padding-bottom: 40px; 
+  padding-left: 15px;
+}
+.successvideodiv{
+  height: 400px;
+   margin-right: 5px;
+}
+.successbuttontext{
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 8px;
+    color: white;
+  }
+  .successbuttondiv{
+    padding-top: 50px; padding-left: 635px;
+
+  }
+  .successbutton{
+    height: 70px;
+    border-radius: 20px; 
+    width: 250px;
+    background: transparent;
+    border: 3px solid rgb(31, 15, 51);
+    
+  }
+
+  .successbutton:hover{
+    height: 70px;
+    border-radius: 20px; 
+    width: 300px;
+    background: linear-gradient(to left bottom, rgba(76, 114, 170, 0.719), rgb(28, 62, 112) ,rgb(61, 11, 71));
+    
+    
+  }
+
+  .successvideo1img{
+    height: 400px;
+    width: 700px;
+    border-radius: 25px;
+   }
+ .successvideodiv1{
+ 
+   position: relative;
+ }
+ 
+ .successplaybtn{
+   height: 70px;
+   width: 70px;
+   position: absolute;
+   top: 50%;
+   left: 100%;
+   transform: translate(-50%,-50%);
+   cursor: pointer; 
+ }
+ 
+ 
+ 
+ .successvideodiv2{
+   padding-left: 15px;
+   padding-right: 15px;
+   position: relative;
+ }
+ 
+ .successvideo2img{
+   height: 400px;
+   width: 700px;
+   border-radius: 25px;
+  }
+ 
+ .successplay2btn{
+   height: 70px;
+   width: 70px;
+   position: absolute;
+   top: 50%;
+   left: 100%;
+   transform: translate(-50%,-50%);
+   cursor: pointer;  
+ }
+ 
+ .successvideohole{
+   
+   flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+   justify-content: center; /* Center align flex items horizontally */
+   align-items: flex-start;
+   overflow-x: auto; /* Add horizontal scrollbar when content overflows */
+   padding-bottom: 20px; 
+   display: inline-block; 
+ }
+ 
+
+</style>
+
+<!-- 10. Institute Event Css Code -->
+
+<style>
+
+  * {
+    box-sizing: border-box;
+  }
+  
+
+  
+  .eventcard {
+    position: sticky;
+    top: 200px;
+    height: 600px;
+    border-radius: 30px;
+    border: none;
+  }
+  
+  .card__inner {
+    will-change: transform;
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+    transform-origin: center top;
+  }
+  
+  .cards {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(var(--cards-count), var(--card-height));
+    gap: 40px;
+  }
+  
+  .card__image-container {
+    
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  .card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+  }
+  
+  .card__content {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card__title {
+    padding: 0;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 600;
+    color: #16263a;
+  }
+  
+  .card__description {
+    line-height: 1.4;
+    font-size: 24px;
+    color: #16263a;
+  }
+  
+  .space {
+    height: 100px;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .card__inner {
+      flex-direction: column;
+    }
+  
+    .card__image-container {
+      width: 100%;
+    }
+  
+    .card__image {
+      aspect-ratio: 16 / 9;
+    }
+  
+    .card__title {
+      font-size: 32px;
+    }
+  
+    .card__description {
+      font-size: 16px;
+    }
+  
+    .card__content {
+      padding: 30px 20px;
+    }
+  }
+
+  .eventh1{
+    font-size: 60px;
+    color: white;
+  }
+
+  .space--small{
+    padding-bottom: 100px;
+  }
+
+.enentdiv{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+</style>
+
+
+<!-- 11. Expert Teacher Css Code -->
+
+<style>
+  
+  .ourexperttechsecdiv .ourexptechcard {
+    position: relative;
+    width : 270px;
+    height : 300px;  
+    background : transparent;
+    margin : 30px 10px;
+    padding : 20px 15px;
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+    border: none;
+  }
+  .ourexperttechsecdiv .ourexptechcard:hover {
+    
+    background: linear-gradient(to left bottom, 	rgb(133, 59, 179), rgb(106, 106, 199), white);
+   
+  }
+  .ourexperttechsecdiv .ourexptechcard:hover {
+    height : 420px;    
+  }
+  
+  
+  .ourexperttechsecdiv .ourexptechcard .image {
+    position : relative;
+    width : 220px;
+    height : 250px;
+    top : -40%;
+    left: 80px;
+    
+    z-index : 1;
+    border: none;
+  }
+  
+  .ourexperttechsecdiv .ourexptechcard .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+  
+  .ourexperttechsecdiv .ourexptechcard .content {
+    position : relative;
+    top : -140px;
+    padding : 40px 15px;
+    color : #111;
+    padding-left: 10px;
+    
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+      
+  }
+  
+  .ourexperttechsecdiv .ourexptechcard:hover .content {
+     margin-top : 30px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+    
+  }
+
+.ourexperttechholebody{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.ourecptext{
+  text-align: center;
+  padding-bottom: 100px;
+}
+.ourecptexth1{
+  font-size: 60px;
+  color: white;
+  font-weight: 700;
+  align-items: center;
+  
+}
+
+.ourexperttechsecdiv{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ourecptextpadd{
+  padding-left:25px;
+  padding-right: 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+</style>
+
+
+<!-- 12. Student Openiton css Code -->
+
+<style>
+  *:before, *:after {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .stucont {
+    display: flex;
+    width: 90vw;
+    padding-bottom: 100px;
+  }
+  
+  .panel {
+    background-size: auto 100%;
+    background-position: center;
+    height: 70vh;
+    border-radius: 40px;
+    color: #fff;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    flex: 0.5;
+    transition: all 0.5s ease; /* Simplified transition */
+    overflow: hidden;
+  }
+
+  .panel.active {
+    flex: 5;
+  }
+
+
+  .stuopenimgdiv{
+    display: none;
+  }
+
+  .panel.active .stuopenimgdiv{
+    display: block;
+  }
+
+
+
+  .stuopensecdiv {
+    padding-top: 20px;
+    padding-left: 20px;
+    
+  }
+
+ 
+  .panel.active .stuopensecdiv {
+    display: block;
+  }
+
+  .stuopenimg {
+    height: 250px;
+    width: 80%;
+    border-radius: 50px;
+    padding: 15px;
+  }
+  
+.studeopenh1div{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.studeopenh1{
+  font-size: 65px;
+  color: white;
+  font-weight: 700;
+}
+
+.stuopiniondiv{
+  background: linear-gradient(to left bottom, rgb(201, 44, 201), rgb(88, 88, 219), rgb(212, 198, 198));
+}
+.stuopiniondivh2{
+  padding-top: 20px; 
+  padding-left: 20px;
+}
+.stuopiniondivh5{
+  padding-top: 10px;
+   padding-left: 20px;
+}
+.stuopiniondivp{
+  width: 95%;
+   color: white; 
+   font-size: 20px;
+    padding-top: 25px
+}
+
+studeopenh1 {
+  
+  background: -webkit-linear-gradient(#eee, #333);
+  
+  -webkit-text-fill-color: transparent;
+}
+
+</style>
+
+<!-- 13. Contract Us Form Css Code -->
+
+<style>
+  
+  /* form animation starts */
+  .form {
+   
+    background: linear-gradient( to left bottom, rgb(88, 38, 88), rgb(87, 87, 170),rgb(122, 120, 120));
+    
+    border-radius: 25px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border: none;
+    animation: bounce 1.5s infinite;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 1.3em;
+  }
+  
+  .title{
+   padding: 7px;
+    font-family: sans-serif;
+    
+  }
+  .termsConditions{
+    transform: scale(2); /* Increase the size of the checkbox */
+  margin-right: 10px;
+  }
+  
+  .pageTitle{
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .secondaryTitle{
+    color: rgb(243, 236, 236);
+    font-size: 25px;
+  }
+  
+  .name {
+    background-color: #7a6dc4;
+  }
+  .name:hover {
+    border-bottom: 5px solid #0e3721;
+    height: 60px;
+    width: 500px;
+    transition: ease 0.5s;
+  }
+  
+  .email {
+    background-color: #7a6dc4;
+    height: 50px;
+  }
+  
+  .email:hover {
+    border-bottom: 5px solid #0e3721;
+    height: 60px;
+    width: 500px;
+    transition: ease 0.5s;
+  }
+  
+  .message {
+    background-color: #7a6dc4;
+    overflow: hidden;
+    height: 200px;
+  }
+  
+  .message:hover {
+    border-bottom: 5px solid #0e3721;
+    height: 260px;
+    width: 500px;
+    transition: ease 0.5s;
+  }
+  
+  .pageTitle{
+    color: white;
+  }
+  .secondaryTitle{
+    color: white;
+  }
+
+  .formEntry {
+    display: block;
+    margin: 30px auto;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .submit {
+    width: 200px;
+    color: white;
+    background: linear-gradient( to left bottom,  rgb(90, 90, 133),rgb(38, 98, 148));
+    font-size: 20px;
+  }
+  
+  .submit:hover {
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+    width: 300px;
+    border-bottom: 5px solid #0e3750;
+    border-radius: 0%;
+    font-size: 25px;
+  }
+  
+  @keyframes bounce {
+    0% {
+      tranform: translate(0, 4px);
+    }
+    50% {
+      transform: translate(0, 8px);
+    }
+  } 
+  
+  .contractusfull{
+    height: 900px;
+    text-align: center;
+    
+  }
+  .contractustext{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 50px;
+  }
+  
+.contractlabel{
+  color: rgb(118, 135, 212);
+  font-size: 25px;
+  
+}
+
+.contractlabelspen{
+  color: #a8d1ba;
+}
+
+::placeholder {
+  color:white;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: white;
+}
+
+</style>
+
+<!-- 14. Our Partner Css Code  -->
+
+<style>
+  .ourpartner{
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+  }
+
+  .ourpartnertext{
+    text-align: center;
+    color: white;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .ourpartnerimgdiv{
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .ourpartnertexth1{
+    font-size: 60px;
+    font-weight: 700;
+    padding-bottom: 50px;
+  }
+
+</style>
+
+
+<!-- 2. banner -->
+
+<div class="fullbanner">
+  <div class="banner1  d-flex">
+    {% for b in Banner %}
+    <div class="col-5">
+      <h1 class=" eLarning"> {{b.Banner_title}} </h1>
+      <p class=" bannerptxt"> {{b.Banner_text}} </p>
+      <div class="buttonclass">
+        <a class="button1 p-2 abuttontype1"  type="button" href="{% url 'All_Course_Page' %}">Browser Course</a>
+        <a class="button1 p-2 abuttontype2"  type="button" href='{% url "seminer_page" %}'>Free Seminer</a>
+      </div>
+    </div>
+    {% endfor %}
+    
+    <div class="col-7 bannervideo">
+      <div class="bannersecvid">
+        <img src="{% static 'Blockchain.jpg' %}" class="bannervidimg" alt="">
+        <img src="{% static 'play.png' %}" class="playbutton" alt="" onclick="playVideo('{{video_url}}')">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- video section -->
+
+
+<div class="videosecplayer" id="videoPlayer" style="display: none;">
+  <video width="100%" controls autoplay muted id="myVideo">
+    <source src="{{ video_url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <img src="{% static 'close2.png' %}" class="closebutton" alt="" onclick="stopVideo()">
+</div>
+
+
+
+<!--3. cattegory section -->
+
+<div class="categorydiv">
+  <div id="carouselExampleControls" class="carousel">
+    <div class="carousel-inner"> 
+      {% for cat in all_cagegory %}
+        <a href="">
+          <div class="carousel-item active">
+            <div class="card1 " herf> 
+                <div class="img-wrapper categoryingrapperdiv"><img src="{{ cat.Category_Image.url }}" class=" cattegoryimgsize" alt="..."> </div>
+                <div class="card-body categorycardbody">
+                    <a href="{% url 'category_page' cat.id %}" class="textdeceration"><h4> {{ cat.Category_Name }} </h4></a>
+                  </div>
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+
+<!-- 4. all category  -->
+
+
+<div class="allcourse">
+  <div class="allcouresunder">
+    <div class="text-center pt-4">
+      <h1 class="fontsize">Our Famous Courses</h1>
+      {% if all_cattogory_top_text %}
+          <p class="loremtext">{{ all_cattogory_top_text.Cattegory_top_text }}</p>
+      {% endif %}
+  </div>
+    <div class="d-flex gap-5 justify-content-center cattegoytype" style="display: block;">
+      <div class="scrollable-tabs-container">
+        <div class="left-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+          </svg>
+        </div>
+       <div class="scrollpayul  slider-services">
+        <ul class="">
+          <li>
+            <a href="{% url 'homepage' %}" class=" acctive1"> All Course</a>
+          </li>
+          {% for cat in all_cagegory %}
+          <li>
+            <a href="{% url 'cattegory_wise_sort' cat.slug %}" class=" acctive1"> {{cat.Category_Name}} </a>
+          </li>
+          {% endfor %}
+        </ul>
+       </div>
+        <div class="right-arrow active">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="border">
+    </div>
+    <div class="allcoursebanner">
+      <!-- First Carousel -->
+      <div id="carouselExample" class="carousel">
+        
+        <div class="carousel-inner firstinner">
+          {% for i in card_data %}
+          <div class="carousel-item active carousel1">
+            <div class="card allcatcard">
+               <div>
+                <img src="{{i.Image.url}}" alt="" class="images">
+                <div class="card-body">
+                  <h5 class="card-title AllCourses">All Courses</h5>
+                  <a class="coursename" href="{% url 'CourseDetailsPage' i.id %}"><h3> {{i.Course_name}} </h3></a>
+                  <p class="reviews"> {{i.student_review}} </p>
+                </div>
+                <div class="">
+                  <div class="d-flex coursefeediv">
+                    <h4>Course Fee</h4>
+                    <div class="coursefee">
+                      <h4> {{i.Course_fees}} BDT  </h4>
+                    </div>
+                  </div>
+                  <div  class="buttondiv">
+                    <a href="#" class="btn cardbuttonborder atag" >
+                      <h4 class="margin">Purches Course</h4>
+                    </a>
+                  </div>
+                </div>
+               </div>
+            </div>
+        </div>
+          {% endfor %}
+           
+            
+
+            <!-- Add more carousel items here -->
+        </div>
+        <button class="carousel-control-prev controlprev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next controlnxt" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- carousel end -->
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 5. our special service -->
+
+
+<div class="ourspeser">
+  <div class="servicesecdiv" >
+    <div  style="padding: 50px">
+      <h1 class="ourh1">Our Special Service</h1>
+      {% for sercice in ourSercicesec %}
+      <p class="ourp"> {{sercice.service_text}} </p>
+      {% endfor %}
+      
+    </div>
+    <div class="d-flex">
+      <div class="col-5 justify-content-center">
+        <div class="p-5">
+          {% for i in ourService %}
+          <ul class="list-group pt-4 "  >
+            <li class="list-group-item ourspili"  aria-current="true">
+              <div class="ourstuuldiv">
+                <h3 class="px-3 ourstuultxt"> {{i.service_name}} </h3>
+              </div>
+            </li>
+          </ul>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-7 spicialserv">
+        <div class="spicialservdiv">
+          {% if last_uploaded_service %}
+          <img src="{{ last_uploaded_service.SercicebannerImage.url }}" class="spicialservimg" alt="">
+          <img src="{% static 'play.png' %}" class="joinplay" alt="" onclick="ourplayVideo('green.mp4')">
+          {% else %}
+          <h3>Image Not Available</h3>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="servicevid" id="ourvideoPlayer" >
+  <video controls autoplay muted  id="ourmyVideo">
+      <source class="videopart" src="{% static 'green.mp4' %}" type="video/mp4" />
+    </video>
+    <img src="{% static 'clos.png' %}" class="serciceclosebutton" alt="" onclick="ourstopVideo()">
+</div>
+
+
+<!-- 6. Category wise show  -->
+
+{% for category, cards in category_card_data.items  %}
+<div class="justify-content-center categorydiv">
+  <h1 class="cattegoryh1 cattegorywiseh1"> {{ category.Category_Name }} </h1>
+  <div class="d-flex justify-content-center">
+    {% for card  in cards  %}
+    <div class="wiseshowcard">
+      <div class="card categorywiseshowcarddiv">
+        <div class="">
+         <img src="{{ card.Image.url }}" alt="" class="images">
+         <div class="card-body">
+           <h5 class="card-title AllCourses">All Courses</h5>
+           
+          <a href="{% url 'CourseDetailsPage' card.id %} " class="cardcoursename"><h3> {{ card.Course_name }} </h3></a>
+           <h5 class=" pt-1">{{ card.student_review }}</h5>
+         </div>
+         <div class="">
+           <div class="d-flex wiseshowcoursefee ">
+             <h4>Course Fee</h4>
+             <div class="coursefee">
+               <h4> {{ card.Course_fees }} BDT</h4>
+             </div>
+           </div>
+           <div class="wiseshowpurchescor">
+             <a href="#" class="btn cardbuttonborder atag" >
+               <h4 class="margin">Purches Course</h4>
+             </a>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+ 
+<!-- 7. Join Free seminer -->
+
+<div class="seminerjoinpart">
+  <h1 class="fisrsth1">Join Our Free Seminer</h1>
+   <div class="textpartjoin">
+        <p class=" joinp"> {{seminerText.seminer_text}} </p>
+    </div>
+  <div class="d-flex joinsecondbody" >
+    
+    <!-- text part  -->
+    <div class="col-5 textfirstdiv">
+      {% for seminer in Free_seminer %}
+      <ul class="list-group pb-2 pt-4 joinseminerul">
+        <li class="list-group-item firstli" aria-current="true">
+          <div class="firstlitext">
+            <h3 class="px-3"> {{seminer.day}} </h3>
+            <span><h5>{{seminer.month_Year}} </h5></span>
+          </div>
+          <div class="px-3 ">
+            <div class="px-3 bg-body-secondary pt-1 underdiv ">
+              <div class="pt-2 d-flex ">
+                <div class="">
+                  <h5 class="">{{seminer.seminer_subject}}</h5>
+                  <h6>{{seminer.seminer_time}}</h6>
+                </div>
+                <div class="underdivbutton">
+                  <a type="button" class="btn btn-success unersembutton"  >Join</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      {% endfor %}
+      <div class="text-center seminerholebutton">
+        <button type="button" class="btn semminerbutton">
+          <p class="seminerbuttonp">Show Other seminer</p>
+        </button>
+      </div>
+    </div>
+  
+
+    <!-- image part -->
+    <div class="col-7">
+      <div class="seminerimgdiv">
+        {% if seminerText %}
+        <img class="seminerimg" src="{{seminerText.Seminer_image.url}}" alt=""/>
+        {% else %}
+        <h3>Image Not Available</h3>
+        {% endif %}
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. institute site Banner -->
+
+
+{% for banner in institute_Banner  %}
+<div class="justify-content-center bannerfull">
+  <div class="d-flex instbanner">
+    <div class="col-5 intright">
+      <h1 class="bannerh1"> {{banner.BannerTitle}} </h1>
+      <p class="intp">{{banner.BannerText}} </p>
+    </div>
+    <div class="col-7 bannerdiv">
+      <img class="bannerstatic"  src="{{ banner.Banner_image.url }}" alt="" />
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<!-- second banner -->
+
+{% for bansec in institute_banner_sec %}
+<div class="justify-content-center bannerfull">
+  <div class="d-flex instbanner">
+    <div class="col-7 bannerdiv">
+      <img class="bannerstatic"  src="{{ bansec.Banner_image.url }}" alt="" />
+    </div>
+    <div class="col-5 intleft">
+      <h1 class="bannerh1">{{bansec.Banner_Title}}</h1>
+      <p class="intp">{{bansec.Banner_Text}}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+<!-- 9 Success history video -->
+
+<div class="successfulldiv" >
+  <div >
+    <div>
+      <div class="successtextpart">
+        <h1 class="successtextparth1">Our Success Story</h1>
+        <p class="successtextpartp">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+          pariatur. Odit corporis architecto eligendi sapiente deserunt,
+          quisquam sunt, beatae et enim obcaecati ratione vero ut voluptates
+          porro perspiciatis quo omnis?
+        </p>
+      </div>
+      <!-- video part -->
+      <div class="parent-container">
+        <div class="d-flex successvideohole" >
+          <div class=" p-2">
+            <div class="col-6 successvideodiv">
+              <div class="successvideodiv1">
+                <img src="{% static 'Blockchain.jpg' %}" class="successvideo1img" alt="">
+                <img src="{% static 'play1.png' %}" class="successplaybtn" alt="">
+              </div>
+            </div>
+          </div>
+          <div class=" p-2">
+            <div class="col-6 successvideodiv">
+              <div class="successvideodiv1">
+                <img src="{% static 'Blockchain.jpg' %}" class="successvideo1img" alt="">
+                <img src="{% static 'play1.png' %}" class="successplaybtn" alt="">
+              </div>
+            </div>
+          </div>
+          <div class=" p-2">
+            <div class="col-6 successvideodiv">
+              <div class="successvideodiv1">
+                <img src="{% static 'Blockchain.jpg' %}" class="successvideo1img" alt="">
+                <img src="{% static 'play1.png' %}" class="successplaybtn" alt="">
+              </div>
+            </div>
+          </div>
+          <div class=" p-2">
+            <div class="col-6 successvideodiv">
+              <div class="successvideodiv1">
+                <img src="{% static 'Blockchain.jpg' %}" class="successvideo1img" alt="">
+                <img src="{% static 'play1.png' %}" class="successplaybtn" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <!-- seemore button -->
+      <div class="successbuttondiv">
+        <button type="button" class="successbutton">
+          <p class="successbuttontext">See More</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 10. institute Event picture -->
+
+<div class=" space--small"> 
+  
+</div>
+
+<div class="enentdiv">
+  <h1 class="eventh1">Events and Activities</h1>
+</div>
+
+<div class="cards">
+  {% for event in Event %}
+  <div class="card eventcard" data-index="0">
+    <div class="card__inner">
+      <div class="card__image-container">
+        <img class="card__image" src="{{ event.Event_image.url }}" alt=""/>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  
+</div>
+<div class="space"></div>
+
+ 
+<!-- 11. Our Expart teacher -->
+
+<div class="ourexperttechholebody align-content-center justify-content-center ">
+  <div class="ourecptext">
+    <h1 class="ourecptexth1">Our Expert Teacher</h1>
+  </div>
+  <div class =" ourexperttechsecdiv d-flex">
+    {% for expert in ExpertTeacher %}
+    <div class=" ourecptextpadd"> 
+      <div class = "card ourexptechcard pt-5" >
+        <div class = image>
+          <img href = "#" src="{{ expert.Teacher_image.url }}">
+        </div>
+        <div class = content>
+          <h3> {{expert.Teacher_name}} </h3>
+          <h4>{{expert.Position_name}}</h4>
+          <h5>{{expert.institute_name}}</h5>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- 12 Student Opinion -->
+
+<div class="studeopenh1div">
+  <h1 class="studeopenh1">Our Student Opinion </h1>
+</div>
+
+
+<div class="container stucont">
+  {% for student in StudentOpenion %}
+  <div class="panel active stuopiniondiv">
+    <div class="d-flex stuopenimgdiv">
+      <div class="col-4 stuimagediv">
+        <img src="{{ student.Student_image.url }}" class="stuopenimg" alt="">
+      </div>
+      <div class="col-8"> 
+        <h2 class="stph2h1 stuopiniondivh2">{{ student.Student_name }}</h2>
+        <h5 class="stph2h1 stuopiniondivh5">{{ student.openion_course_name }}</h5>
+      </div>
+    </div>
+    <div class="stuopensecdiv">
+      <p class="stuopiniondivp ">{{ student.Openion_text }}</p>
+    </div>
+  </div>
+  {% endfor %}
+ 
+  <!-- Add more panels here -->
+  
+</div>
+
+
+<!--13. contract us form -->
+
+
+<div class="contractusfull">
+  <h1 class="contractustext" >Contract Us Form</h1>
+  <div class="wrapper">
+    <form class="form">
+      <div class="pageTitle title">Sign Up </div>
+      <div class="secondaryTitle title">Please fill this form to sign up.</div>
+      <input type="text" class="name formEntry " placeholder="Name" />
+      <input type="text" class="email formEntry" placeholder="Email"/>
+      <textarea class="message formEntry " placeholder="Message"></textarea>
+      <input type="checkbox" class="termsConditions" value="Term">
+      <label class="contractlabel" for="terms" > I Accept the <span class="contractlabelspen">Terms of Use</span> & <span class="contractlabelspen">Privacy Policy</span>.</label><br>
+      <button class="submit formEntry" onclick="thanks()">Submit</button>
+    </form>
+  </div>
+</div>
+ 
+
+<!-- 14. Our partners -->
+
+<div class="ourpartner">
+  <div class="ourpartnertext">
+    <h1 class="ourpartnertexth1">Our Support Partners</h1>
+  </div>
+  
+  <div class="ourpartnerimgdiv d-flex">
+    {% for i in partner %}
+    <div>
+      <img src="{{ i.Prather_Logo.url }}" alt="">
+    </div>
+    {% endfor %}
+  </div>
+  
+ 
+</div>
+
+
+
+
+
+
+<!-- All js Code -->
+
+<!-- 2. banner js code -->
+
+<script>
+  var videoPlayer = document.getElementById("videoPlayer");
+  var myVideo = document.getElementById("myVideo");
+
+  function stopVideo(){
+    videoPlayer.style.display = 'none';
+    myVideo.pause(); // Pause the video
+  }
+
+  function playVideo(file){
+    myVideo.src = file; // Set the video source directly
+    videoPlayer.style.display = 'block';
+    myVideo.play(); // Play the video
+}
+
+</script>
+
+
+<!-- 3. cattegory js code -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var multipleCardCarousel = document.querySelector("#carouselExampleControls");
+  
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+        interval: false,
+      });
+  
+      var carouselInner = document.querySelector(".carousel-inner");
+      var carouselWidth = carouselInner.offsetWidth;
+      var cardWidth = document.querySelector(".carousel-item").offsetWidth;
+      var visibleCards = Math.floor(carouselWidth / cardWidth);
+      var totalCards = document.querySelectorAll(".carousel-item").length;
+      var scrollPosition = 0;
+  
+      document
+        .querySelector("#carouselExampleControls .carousel-control-next")
+        .addEventListener("click", function () {
+          // Calculate the maximum scroll position
+          var maxScrollPosition = cardWidth * (totalCards - visibleCards);
+          
+          if (scrollPosition < maxScrollPosition) {
+            scrollPosition += cardWidth;
+            carouselInner.scrollTo({
+              left: scrollPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+  
+      document
+        .querySelector("#carouselExampleControls .carousel-control-prev")
+        .addEventListener("click", function () {
+          if (scrollPosition > 0) {
+            scrollPosition -= cardWidth;
+            carouselInner.scrollTo({
+              left: scrollPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+    } else {
+      multipleCardCarousel.classList.add("slide");
+    }
+  });
+  
+
+</script>
+
+
+<!-- 4. All Category js code -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var multipleCardCarousel = document.querySelector("#carouselExample");
+  
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+        interval: false,
+      });
+  
+      var carouselInner = document.querySelector(".firstinner");
+      var carouselWidth = carouselInner.offsetWidth;
+      var cardWidth = document.querySelector(".carousel1").offsetWidth;
+      var visibleCards = Math.floor(carouselWidth / cardWidth);
+      var totalCards = document.querySelectorAll(".carousel1").length;
+      var scrollPosition = 0;
+  
+      document
+        .querySelector(".controlnxt")
+        .addEventListener("click", function () {
+          // Calculate the maximum scroll position
+          var maxScrollPosition = cardWidth * (totalCards - visibleCards);
+          
+          if (scrollPosition < maxScrollPosition) {
+            scrollPosition += cardWidth;
+            carouselInner.scrollTo({
+              left: scrollPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+  
+      document
+        .querySelector(".controlprev")
+        .addEventListener("click", function () {
+          if (scrollPosition > 0) {
+            scrollPosition -= cardWidth;
+            carouselInner.scrollTo({
+              left: scrollPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+    } else {
+      multipleCardCarousel.classList.add("slide");
+    }
+    });
+
+</script>
+
+
+<script>
+
+  const tabs = document.querySelectorAll(".scrollable-tabs-container a");
+    const rightArrow = document.querySelector(
+    ".scrollable-tabs-container .right-arrow svg"
+    );
+    const leftArrow = document.querySelector(
+    ".scrollable-tabs-container .left-arrow svg"
+    );
+    const tabsList = document.querySelector(".scrollable-tabs-container ul");
+    const leftArrowContainer = document.querySelector(
+    ".scrollable-tabs-container .left-arrow"
+    );
+    const rightArrowContainer = document.querySelector(
+    ".scrollable-tabs-container .right-arrow"
+    );
+
+    const removeAllActiveClasses = () => {
+    tabs.forEach((tab) => {
+      tab.classList.remove("active");
+    });
+    };
+
+    tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      removeAllActiveClasses();
+      tab.classList.add("active");
+    });
+    });
+
+    const manageIcons = () => {
+    if (tabsList.scrollLeft >= 20) {
+      leftArrowContainer.classList.add("active");
+    } else {
+      leftArrowContainer.classList.remove("active");
+    }
+
+    let maxScrollValue = tabsList.scrollWidth - tabsList.clientWidth - 20;
+    console.log("scroll width: ", tabsList.scrollWidth);
+    console.log("client width: ", tabsList.clientWidth);
+
+    if (tabsList.scrollLeft >= maxScrollValue) {
+      rightArrowContainer.classList.remove("active");
+    } else {
+      rightArrowContainer.classList.add("active");
+    }
+    };
+
+    rightArrow.addEventListener("click", () => {
+    tabsList.scrollLeft += 200;
+    manageIcons();
+    });
+
+    leftArrow.addEventListener("click", () => {
+    tabsList.scrollLeft -= 200;
+    manageIcons();
+    });
+
+    tabsList.addEventListener("scroll", manageIcons);
+
+    let dragging = false;
+
+    const drag = (e) => {
+    if (!dragging) return;
+    tabsList.classList.add("dragging");
+    tabsList.scrollLeft -= e.movementX;
+    };
+
+    tabsList.addEventListener("mousedown", () => {
+    dragging = true;
+    });
+
+    tabsList.addEventListener("mousemove", drag);
+
+    document.addEventListener("mouseup", () => {
+    dragging = false;
+    tabsList.classList.remove("dragging");
+    });
+
+
+
+
+</script>
+
+<!-- 5. OUr Service js code -->
+<script>
+  var ourvideoPlayer = document.getElementById("ourvideoPlayer")
+  var ourmyVideo = document.getElementById("ourmyVideo")
+
+  function ourstopVideo() {
+    ourvideoPlayer.style.display = 'none';
+    ourmyVideo.pause(); // Pause the video
+    ourmyVideo.muted = true; // Mute the video
+}
+
+  function ourplayVideo(file){
+    ourmyVideo.src = "{% static 'green.mp4' %}";
+    ourvideoPlayer.style.display = 'block';
+    ourmyVideo.play();
+  }
+
+
+</script>
+
+
+<!-- 12. Student Openion js Code -->
+
+<script>
+  const panels = document.querySelectorAll(".panel");
+
+  panels.forEach((panel) => {
+    panel.addEventListener("click", () => {
+      panels.forEach((p) => p.classList.remove("active"));
+      panel.classList.add("active");
+    });
+  });
+</script>
+
+
+
+{% endblock blockname %}

@@ -1,0 +1,430 @@
+{% load embed_video_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Managment</title>
+    <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="fullbody">
+
+
+<style>
+  
+  
+  .fullbody{
+    background: linear-gradient(to left bottom, white, purple,	rgb(0,0,128),rgb(178, 190, 181),rgb(134, 131, 131)	);
+  }
+  
+  .secondnavbar{
+    background: linear-gradient(to left bottom, rgb(10, 19, 97), rgb(56, 6, 56),	rgb(29, 29, 177)	);
+    height: 100px;
+  }
+
+#navbarCollapse{
+  background:#00000000;
+}
+
+.firstnavbar{
+  background: linear-gradient(to left bottom, white, rgb(206, 110, 206),	rgb(101, 101, 196)	);
+}
+.nabtextcolor{
+  color: white;
+}
+
+.nabtextcolor:hover{
+  color: white;
+}
+
+.logout{
+  text-decoration: none;
+  color: rgb(28, 7, 48);
+  padding-top: 22px;
+  
+
+}
+
+
+
+.lefttorighttext{
+  padding-top: 20px;
+}
+
+.elearningemail{
+  color: rgb(9, 14, 63);
+}
+
+.logoutdiv{
+  padding-left: 50px;
+  padding-right: 50px;
+  
+}
+  
+.transletbtn{
+  padding-top: 17px;
+
+}
+
+.border-white{
+  padding-right:20px; 
+  padding-top:5px
+}
+
+.socialicon{
+  height: 40px;
+  width: 40px;
+ margin-left: 25px;
+ cursor: pointer;
+  
+}
+.socialicondiv{ 
+  
+  margin-top: -10px;
+}
+.linkdin{
+  height: 55px;
+  width: 55px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.youtube{
+  height: 55px;
+  width: 55px;
+  margin-left: 25px;
+  cursor: pointer;
+  
+}
+.numemail{
+  padding-left: 80px;
+}
+.btn{
+  color: white;
+}
+</style>
+  
+
+<div class="container-fluid sticky-top px-0 ">
+  
+  <div class="container-fluid topbar firstnavbar d-none d-lg-block">
+    <div class=" px-0">
+        <div class="topbar-top d-flex flex-lg-wrap">
+            <div class="top-info d-flex">
+                <div class="border-end numemail border-white">
+                    <div>
+                        <h5 class="text-white pt-1">01758544450</h5>
+                    </div>
+                    <div class="elearningemail">
+                        <h5>eLearning2024@gmail.com</h5>
+                    </div>
+                </div>
+                <div class="overflow-hidden" style="width: 1050px;">
+                    <div id="note" class="lefttorighttext">
+                     <p class="text-white scrolling-text"> {{navbarText.Text}} </p>
+                    </div>
+                </div>
+                <div class="d-flex logoutdiv">
+                    <div class="gap-5">
+                        <a href="" class="btn logout"><h4>Login</h4></a>
+                    </div>
+                    <div class="transletbtn">
+                        <a href="" class="btn"><h4>Register</h4></a>
+                    </div>
+                    <div class="transletbtn">
+                        <a href="" ><img src="{% static 'socialmedia/translet.png' %}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<style>
+    .scrolling-text {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    @keyframes scroll {
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+    }
+    .navlogoa{
+      padding-left: 70px;
+    }
+    .searchopt{
+      padding-left: 70px;
+      padding-top: 10px;
+    }
+    .searchbtn{
+      margin-left: 20px;
+    }
+</style>
+
+
+  <div class="container-fluid secondnavbar">
+    <div class=" px-0" >
+      <nav class="navbar navbar-expand-xl">
+          <a href="{% url 'homepage' %}" class="navbar-brand  navlogoa">
+              <p class="text-primary display-6 mb-2" style="line-height: 0;">Newsers</p>
+              <small class="text-body fw-normal" style="letter-spacing: 12px;">Nespaper</small>
+          </a>
+          <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="fa fa-bars text-primary"></span>
+          </button>
+          <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+            <div class="navbar-nav  gap-3" >
+                <a href="{% url 'homepage' %}" class="nav-item nav-link active"><H4 class="nabtextcolor">Home</H4></a>
+                <a href="" class="nav-item nav-link nabtextcolor"><H4>All Course</H4></a>
+                <a href="" class="nav-item nav-link nabtextcolor"><h4>Freelancing</h4></a>
+                <a href="" class="nav-item nav-link nabtextcolor"><h4>It Service</h4></a>
+                <a href="" class="nav-item nav-link nabtextcolor"><h4>Contract Us</h4></a>
+                <a href="" class="nav-item nav-link nabtextcolor"><h4>About Us</h4></a>
+                <div class="socialicondiv d-flex">
+                 <div>
+                  <img src="{% static 'socialmedia/facebook1.png' %}" class="socialicon" alt="">
+                  <img src="{% static 'socialmedia/instagram.png' %}" class="socialicon" alt="">
+                  <img src="{% static 'socialmedia/linkdin.png' %}" class="linkdin" alt="">
+                 </div>
+                  <div class="searchopt">
+                    <form class="form-inline d-flex">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success searchbtn my-2 my-sm-0 px" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="d-lg-none"> <!-- This div will be hidden on lg screens -->
+                  <a href="" class="nav-item nav-link nabtextcolor"><h4>Login</h4></a>
+                  <a href="" class="nav-item nav-link nabtextcolor"><h4>Register</h4></a>
+                  
+              </div>
+            </div>
+          </div>
+      </nav>
+    </div>
+  </div>
+</div>
+        
+      {% block blockname %}
+        
+      {% endblock blockname %}
+
+      
+    
+    <!-- Footer SEction -->
+      <!-- 3. Footer Part -->
+
+      <style>
+        .Footerfirstdiv{
+           background: transperent;
+            padding-top:150px
+        }
+        .Footerdivp{
+          font-size: 65px;
+          font-weight: 700;
+          color: white;
+        }
+        .Footerdivh3{
+         padding-top:50px;
+         color: white;
+        }
+        .footerbutton{
+          padding-top: 50px;
+        }
+        .footerbutton1{
+          padding-right: 15px;
+        }
+        .footerbutton12{
+          border: 3px solid rgb(54, 7, 97);
+          border-radius: 15px;
+         
+        }
+        .footerbutton12:hover{
+          border: none;
+          background-color: rgb(7, 181, 187);
+         
+        }
+        .footerbuttontext{
+          font-size: 30px;
+          
+        }
+        .footerbuttontext:hover{
+          font-size: 30px;
+          color:white;
+          
+        }
+        .footerbutton2{
+          padding-left: 15px;
+        }
+        .footertextall{
+          padding-top: 70px;
+        }
+        .footertextseconddiv{
+          padding-left:150px; 
+          padding-right:150px;
+        }
+        .footerseconddivh1{
+          color: white;
+        }
+        .footerseconddivul{
+          font-size: 25px;
+          list-style-type: none;
+        }
+      </style>
+
+<div class="Footerfirstdiv">
+  <div>
+    <!-- 1.text part -->
+    <div style="text-align: center;">
+      <p class="Footerdivp" >Admission Is Going on</p>
+      <h3 class="Footerdivh3">
+        Enroll to any online or offline course now, take one step ahead towards a competent career
+      </h3>
+    </div>
+    <!-- 2. button part -->
+    <div class=" d-flex align-content-center justify-content-center footerbutton">
+     <div  class="footerbutton1" >
+      <a type="button" class="btn  footerbutton12 p-3"><h4 class="footerbuttontext">Join Free Seminer</h4></a>
+     </div>
+     <div class="footerbutton2">
+      <a type="button" class="btn footerbutton12 p-3" ><h4 class="footerbuttontext">Browser Free Course</h4></a>
+     </div>
+    </div>
+    <!-- 3. footer text part -->
+
+    <!-- footer Text part -->
+    
+    <div class="align-content-center justify-content-center footertextall">
+      <div class="d-flex align-content-center justify-content-center footertextseconddiv">
+          {% for header in Footer_other_header_name %}
+          <div class="col-3">
+              <h1 class="footerseconddivh1">{{ header.Header_Name }}</h1>
+              <ul class="footerseconddivul">
+                  {% for item in header.header_li_set.all %}
+                  <li class="pt-3">{{ item.List_Data }}</li>
+                  {% endfor %}
+              </ul>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+  
+  </div>
+</div>
+
+
+
+<!-- Payment footer  -->
+
+
+<!-- payment foter css code -->
+
+<style>
+  .paymentsecdiv{
+    padding-top: 100px;
+  }
+  .paymentsecdivh1{
+    padding-bottom: 50px;
+    font-size: 65px;
+    color: white;
+    font-weight: 600;
+  }
+
+.paymentCard{
+  width: 130px;
+  height:130px; 
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.paymentCardimage{
+  height: 60%;
+  width:60%;
+}
+.paymentfirstdiv{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+</style>
+
+<div class="paymentfirstdiv">
+  <div class=" paymentsecdiv text-center">
+    <h1 class="paymentsecdivh1">Our Payment  Merchant</h1>
+  </div>
+  <div class="align-content-center d-flex flex-wrap justify-content-center" >
+    {% for pim in Pyament_image %}
+    <div class=" p-1">
+      <div class="card paymentCard ">
+          <img src="{{ pim.Payment_image.url }}" class="card-img-top paymentCardimage " alt="...">
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- border section -->
+  <div style="padding-top: 50px; padding-left:100px; padding-right:100px">
+    <div style=" padding-top: 50; border-bottom: 2px solid rgb(107, 107, 107);">
+    </div>
+  </div>
+
+  <!-- copy right section -->
+
+  {% for t in footer_last %}
+  <div class="align-content-center d-flex flex-wrap justify-content-center p-5">
+    <div class="align-content-center flex-wrap justify-content-center ">
+      <img src=" {{ t.Institute_Logo.url}} " class="card-img-top" style="height: 50%; width:50%" alt="...">
+    </div>
+    <div class=" col-6 text-center">
+      <h5> {{t.copyright_text}} </h5>
+      <h5> {{t.licence_number}} </h5>
+    </div>
+    
+  </div>
+  {% endfor %}
+  
+
+</div>
+
+
+
+
+
+
+
+<script>
+  // Dynamically calculate animation duration based on text length
+  const noteElement = document.getElementById('note');
+  const textElement = noteElement.querySelector('.scrolling-text');
+  const containerWidth = noteElement.clientWidth;
+  const textWidth = textElement.scrollWidth;
+  const textLength = textElement.textContent.trim().split(/\s+/).length;
+  const animationDuration = (textWidth / containerWidth) * 10; // 10s for every full container width
+  textElement.style.animation = `scroll ${animationDuration}s linear infinite`;
+</script>
+
+
+
+    <!-- js site -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="static/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include SortableJS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Translet js code  -->
+
+
+ 
+
+
+  
+
+</body>
+</html>

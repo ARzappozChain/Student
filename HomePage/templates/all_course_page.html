@@ -1,0 +1,405 @@
+{% extends "base.html" %}
+{% load static %}
+{% block blockname %}
+        
+
+<!-- 1. category section -->
+
+
+<style>
+.categorysecdiv{
+  text-align: center; 
+  padding-top:100px
+}
+.categorysecdivh1{
+  font-size: 75px;
+  color: white;
+  font-weight: 600;
+}
+.categorysecdivp{
+  padding-left: 250px;
+  padding-right: 250px; 
+  padding-top:50px;
+  font-size: 30px;
+  color: white;
+  
+}
+.cattegorythirddiv{
+  padding-left:200px;
+  padding-right:200px;
+   padding-top:100px;
+    padding-bottom:100px 
+}
+.cattegorythirddivsec{
+  padding:100px;
+ 
+}
+.thirddivcard{
+  border: none; 
+  width: 200px; 
+  height:200px; 
+  background-color: rgb(255, 255, 255); 
+  border-radius: 20px; 
+  justify-content: center;
+  align-items: center;
+}
+.thirddivimg{
+  height: 25%; 
+  width:25%
+}
+.thirddivimgtext{
+  padding-top: 5px;
+   padding-left:10px; 
+   padding-right:10px;
+   text-align: center;
+}
+</style>
+
+<!-- 2. Category wise show css code  -->
+
+<style>
+  .cattegorywiseshowfirstdiv {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .cattegorywiseshowheader {
+    font-size: 65px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .cattegorywiseshowcarddiv {
+    padding-top: 80px;
+  }
+  .cattegorywiseshowcard {
+    border-radius: 25px;
+    height: 550px;
+    width: 400px;
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+  }
+  .cattegorywiseshowcardimg {
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 260px;
+  }
+  .AllCourses {
+    color: #e16812;
+  }
+  .reviews {
+    font-size: 20px;
+  }
+  .coursefeediv {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .coursefee {
+    padding-left: 100px;
+  }
+  .purchesbuttondiv {
+    padding-left: 70px;
+    padding-bottom: 15px;
+  }
+  .purchesbuttona {
+    border-radius: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .cattegorywisesfullcard {
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .cattegorywiseshowseconddiv {
+    padding-left: 80px;
+  }
+  .purchesbuttona {
+    border: 3px solid #35033a;
+    color: #590a69;
+  }
+  .purchesbuttona:hover {
+    border: none;
+    background: #35033a;
+    color: #ebe3ec;
+  }
+  .coursename{
+    text-decoration: none;
+    color: rgb(75, 73, 73);
+  }
+  .cattegoryheader{
+    padding-left: 50px;
+    
+  }
+  .cattegoryheaderh1{
+    font-size: 55px;
+    color: white;
+    padding-top: 50px;
+  }
+</style>
+
+
+<!-- 3 join free seminer css code -->
+
+<style>
+  .seminerjoinpart{
+    padding-top: 200px;
+    padding: 100px;
+    
+  }
+  
+  
+    .fisrsth1{
+      font-size: 65px;
+      color: white;
+      padding-left: 50px;
+      font-weight: 700;
+    }
+  .joinsecondbody{
+    background: linear-gradient(to left bottom, rgb(216, 211, 211), rgb(59, 59, 59),rgb(139, 25, 139), );
+    border-radius: 25px;
+  }
+  
+  .joinp{
+    font-size: 30px;
+    padding-bottom: 25px;
+    color: white;
+  }
+  .textfirstdiv{
+    padding: 50px;
+    padding-top: 50px;
+  }
+  .firstli{
+    display: -webkit-box; 
+    width: 600px;
+    background-color: #4c4e9c;
+    border: none;
+    
+  }
+  
+  .firstli:hover{
+    display: -webkit-box; 
+    width: 600px;
+    background: linear-gradient( to left bottom, rgba(99, 31, 93, 0.849),rgba(11, 90, 121, 0.767));
+    border: none;
+    
+  }
+  
+  
+  .underdiv{
+    border-radius: 15px; 
+    width: 450px;
+    background-color: #16263a;
+  }
+  .underdivbutton{
+    padding-left: 100px; 
+    padding-top: 5px;
+    background-color: 2px solid #08143d ;
+  }
+  .seminerimgdiv{
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+  .seminerimg{
+    border-radius: 30px;
+    height: 500px; 
+    width: 95%;
+  }
+  
+  .unersembutton{
+    width: 90px;
+    border: 2px rgb(55, 38, 100);
+  }
+  
+  .seminerholebutton{
+    padding-top: 30px;
+  }
+  .semminerbutton{
+    border-radius: 20px;
+    border: 3px solid rgb(55, 38, 100);
+    height: 65px;
+    width: 300px;
+    color: white;
+    
+  }
+  .semminerbutton:hover{
+    background: linear-gradient(to left bottom,#2297ce,rgb(35, 35, 175));
+      color: black;
+      border: none;
+  }
+  .seminerbuttonp{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .firstlitext{
+    color: white;
+  }
+  
+  
+  
+  
+  .unersembutton{
+    background-color:#08143d; 
+    color:white;
+  }
+  .unersembutton:hover{
+    background-color:#2142ac; 
+    color:white;
+  }
+  .textpartjoin{
+    text-align: center;
+  }
+  .textpartjointhirddiv{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+  }
+  .joinseminerheaderptag{
+    font-size: 25px;
+    color: white;
+  }
+  </style>
+
+
+
+
+<div>
+    <div  class="categorysecdiv" >
+        <h1 class="categorysecdivh1" >কোর্স সমূহ</h1>
+        <p class="categorysecdivp" >বর্তমান বিশ্বের সব ট্রেন্ডি এবং চাহিদাসম্পন্ন সব কোর্স রয়েছে ক্রিয়েটিভ আইটি ইনস্টিটিউটে। কোর্স করার সময় যে প্রয়োজনীয় কনফিগারেশনের কম্পিউটার দরকার, তার সবই রয়েছে আমাদের ল্যাবে। আপনি চাইলেই ক্লাসের পরে ল্যাবে বসে কোর্স বিষয়ক যেকোনো কিছু প্র্যাকটিস করতে পারেন। প্রতিটি কোর্স এমনভাবে ডিজাইন করা হয়েছে যাতে আপনি কোর্স শেষে প্রতিটি টপিকে কাজ করার আত্মবিশ্বাস পান।</p>
+    </div>
+<div  class="align-content-center d-flex flex-wrap justify-content-center cattegorythirddiv" >
+      <!-- Verify if show_all_category is received -->
+      
+{% if show_all_category %}
+<div class="align-content-center d-flex flex-wrap justify-content-center cattegorythirddivsec">
+    {% for category in show_all_category %}
+        <div class="p-3">
+            <div class="card thirddivcard">
+                <img src="{{ category.Category_Image.url }}" class="card-img-top thirddivimg" alt="...">
+                <h4 class="thirddivimgtext">{{ category.Category_Name }}</h4>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No categories found.</p>
+{% endif %}
+
+      
+    </div>
+</div>
+
+
+<!-- 2. Category wise show  -->
+
+
+
+
+
+{% for category, cards in category_card_data.items %}
+<div class="justify-content-center cattegorywiseshowfirstdiv">
+  <div class="cattegoryheader">
+    <h1 class='cattegoryheaderh1'>{{ category.Category_Name }}</h1>
+  </div>
+  <div class="align-content-center d-flex flex-wrap justify-content-center cattegorywiseshowcarddiv">
+    {% for card in cards %}
+    <div class="cattegorywisesfullcard">
+      <div class="card cattegorywiseshowcard">
+        <div class="cattegorywiseshowcarddivimg">
+          <img src="{{ card.Image.url }}" class="card-img-top cattegorywiseshowcardimg" alt="...">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title AllCourses">All Courses</h4>
+          <a class="coursename" href="{% url 'CourseDetailsPage' card.id %}"><h3>{{ card.Course_name }}</h3></a>
+          <p class="reviews">{{ card.student_review }}</p>
+        </div>
+        <div>
+          <div class="d-flex coursefeediv">
+            <h4>Course Fee</h4>
+            <h4 class="coursefee">{{ card.Course_fees }} BDT</h4>
+          </div>
+          <div class="purchesbuttondiv">
+            <a href="#" class="btn purchesbuttona">
+              <h4>Purchase Course</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+  <!-- 3. Join Free seminer -->
+
+<div class="seminerjoinpart">
+  
+   <div class="textpartjoin">
+      <h1 class="fisrsth1">Join Our Free Seminer</h1>
+    <div class="textpartjointhirddiv">
+      <p class="joinseminerheaderptag"> {{ seminerText.seminer_text}} </p>
+     
+    </div>
+    </div>
+  <div class="d-flex joinsecondbody" >
+    
+    <!-- text part  -->
+   
+    <div class="col-5 textfirstdiv"> 
+      {% for seminer in seminer_time %}
+      <ul class="list-group pb-2 pt-4 joinseminerul">
+        <li class="list-group-item firstli" aria-current="true">
+          <div class="firstlitext">
+            <h3 class="px-3"> {{seminer.day}} </h3>
+            <span><h5>{{seminer.month_Year}}</h5></span>
+          </div>
+          <div class="px-3 ">
+            <div class="px-3 bg-body-secondary pt-1 underdiv ">
+              <div class="pt-2 d-flex ">
+                <div class="">
+                  <h5 class="">{{seminer.seminer_subject}}</h5>
+                  <h6>{{seminer.seminer_time}}</h6>
+                </div>
+                <div class="underdivbutton">
+                  <a type="button" class="btn btn-success unersembutton"  >Join</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      {% endfor %}
+      <div class="text-center seminerholebutton">
+        <button type="button" class="btn semminerbutton">
+          <p class="seminerbuttonp">Show Other seminer</p>
+        </button>
+      </div>
+    </div>
+    <!-- image part -->
+    <div class="col-7">
+      <div class="seminerimgdiv">
+        {% if seminerText %}
+        <img class="seminerimg" src="{{seminerText.Seminer_image.url}}" alt=""/>
+        {% else %}
+        <h3>Image Not Available</h3>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock blockname %}
