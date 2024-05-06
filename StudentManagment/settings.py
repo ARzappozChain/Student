@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Deshboard',
     'HomePage',
     'Home_Page_Two',
+    'Login_Logout',
 ]
 
 MIDDLEWARE = [
