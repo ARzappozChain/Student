@@ -63,5 +63,3 @@ def Seminer_Page_views(request, category_slug = None):
     }) 
                 
                 
-def All_course_page(request):
-    all_data = CourseInfo.objects.last()

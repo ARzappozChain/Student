@@ -26,5 +26,6 @@ urlpatterns = [
     path('', include('Deshboard.urls')),
     path('Homepage/', include('HomePage.urls')),
     path('SecondPage/', include('Home_Page_Two.urls')),
+    path('Login_Logout/', include('Login_Logout.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

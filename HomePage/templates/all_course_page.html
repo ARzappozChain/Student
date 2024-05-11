@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block blockname %}
-        
+         
 
 <!-- 1. category section -->
 
@@ -53,7 +53,11 @@
    padding-right:10px;
    text-align: center;
 }
+.cardpadding{
+  padding: 10px;
+}
 </style>
+
 
 <!-- 2. Category wise show css code  -->
 
@@ -263,6 +267,74 @@
 
 
 
+  <!--1. CAtegory secton  media query  -->
+
+<style>
+  @media (min-width:300px) and (max-width: 450px) {
+   
+    .categorysecdiv{
+      text-align: left; 
+      padding-top:50px;
+      text-align: left; 
+      padding-left: 10px;
+    }
+
+    .categorysecdivh1{
+      font-size: 20px;
+      color: white;
+      text-align: left;
+      
+      
+      
+    }
+  
+
+    .categorysecdivp {
+      padding-left: 10px; 
+      padding-right: 10px; 
+      padding-top: 12px; 
+      font-size: 16px; 
+      
+    }
+    
+    .cattegorythirddiv{
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:20px;
+      padding-bottom:20px  
+    }
+
+    .cattegorythirddivsec{
+      padding:0px;
+      flex-wrap: wrap;
+     
+    }
+    .thirddivcard{
+      border: none; 
+      width: 120px; 
+      height:120px; 
+      background-color: rgb(255, 255, 255); 
+      border-radius: 15px; 
+      
+    }
+    .thirddivimg{
+      height: 25%; 
+      width:25%
+    }
+    .thirddivimgtext{
+      padding-top: 5px;
+       padding-left:10px; 
+       padding-right:10px;
+       text-align: center;
+       font-size: 15px;
+    }
+
+    
+    
+
+  }
+</style>
+
 
 <div>
     <div  class="categorysecdiv" >
@@ -275,12 +347,13 @@
 {% if show_all_category %}
 <div class="align-content-center d-flex flex-wrap justify-content-center cattegorythirddivsec">
     {% for category in show_all_category %}
-        <div class="p-3">
+        <div class="cardpadding">
             <div class="card thirddivcard">
                 <img src="{{ category.Category_Image.url }}" class="card-img-top thirddivimg" alt="...">
                 <h4 class="thirddivimgtext">{{ category.Category_Name }}</h4>
             </div>
         </div>
+        
     {% endfor %}
 </div>
 {% else %}
@@ -293,7 +366,91 @@
 
 
 <!-- 2. Category wise show  -->
+<style>
 
+  @media (min-width:300px) and (max-width: 450px){
+    .cattegorywiseshowfirstdiv {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    .cattegoryheaderh1{
+      font-size: 25px;
+      color: white;
+      padding-top: 20px;
+    }
+    .cattegoryheader{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .cattegorywiseshowcarddiv {
+      padding-top: 0px;
+    }
+    .cattegorywiseshowcard {
+      border-radius: 20px;
+      height: 450px;
+      width: 290px;
+      margin: 0 0.5em;
+      box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+      border: none;
+    }
+    .cattegorywiseshowcardimg {
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      height: 205px;
+    }
+    .AllCourses {
+      color: #e16812;
+      font-size: 16px;
+    }
+    .reviews {
+      font-size: 13px;
+    }
+    .coursefeediv {
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+    .coursefee {
+      padding-left: 50px;
+    }
+    .purchesbuttondiv {
+      padding-left: 40px;
+      padding-bottom: 15px;
+    }
+    .purchesbuttona {
+      border-radius: 25px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .cattegorywisesfullcard {
+      
+      padding-top: 20px;
+    }
+    .cattegorywiseshowseconddiv {
+      padding-left: 80px;
+    }
+    .purchesbuttona {
+      border: 3px solid #35033a;
+      color: #590a69;
+    }
+    .purchesbuttona:hover {
+      border: none;
+      background: #35033a;
+      color: #ebe3ec;
+    }
+    .coursename{
+      text-decoration: none;
+      color: rgb(75, 73, 73);
+    }
+    
+    .coursefeess{
+      font-size: 18px;
+    }
+    
+  }
+ 
+</style>
 
 
 
@@ -317,7 +474,7 @@
         </div>
         <div>
           <div class="d-flex coursefeediv">
-            <h4>Course Fee</h4>
+            <h4 class="coursefeess">Course Fee</h4>
             <h4 class="coursefee">{{ card.Course_fees }} BDT</h4>
           </div>
           <div class="purchesbuttondiv">
@@ -344,6 +501,317 @@
 
   <!-- 3. Join Free seminer -->
 
+  <style>
+    @media (min-width:300px) and (max-width: 450px){
+      .seminerjoinpart{
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;        
+        padding: 0px;
+      }
+      
+      
+      .fisrsth1{
+        font-size: 20px;
+        color: white;
+        font-weight: 700;
+        padding-left: 0px;
+      }
+      .joinsecondbody{
+        background: linear-gradient(to left bottom, rgb(216, 211, 211), rgb(59, 59, 59),rgb(139, 25, 139), );
+        border-radius: 15px;
+      }
+      
+      .joinp{
+        font-size: 30px;
+        padding-bottom: 25px;
+        color: white;
+      }
+
+     
+      .textfirstdiv{
+        padding: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;      
+        
+      }
+      .firstli{
+        display: -webkit-box; 
+        width: 285px;
+        background-color: #4c4e9c;
+        border: none;
+        
+      }
+      
+      .firstli:hover{
+        display: -webkit-box; 
+        width: 285px;
+        background: linear-gradient( to left bottom, rgba(99, 31, 93, 0.849),rgba(11, 90, 121, 0.767));
+        border: none;
+        
+      }
+      
+      
+      .underdiv{
+        border-radius: 5px; 
+        width: 190px;
+        background-color: #16263a;
+      }
+      .underdivbutton{
+        padding-left:30px; 
+        padding-top: 0px;
+        background-color: 2px solid #08143d ;
+        
+        
+      }
+      .seminerimgdiv{
+        display: none;
+      }
+      .seminerimg{
+       display: none;
+      }
+      
+      .unersembutton{
+        width: 40px;
+        border: 0px rgb(55, 38, 100);
+      }
+      
+      .seminerholebutton{
+        padding-top: 30px;
+        padding-left: 20px;
+      }
+      .semminerbutton{
+        border-radius: 10px;
+        border: 2px solid rgb(55, 38, 100);
+        height: 45px;
+        width: 240px;
+        color: white;
+        
+      }
+      .semminerbutton:hover{
+        background: linear-gradient(to left bottom,#2297ce,rgb(35, 35, 175));
+          color: black;
+          border: none;
+      }
+      .seminerbuttonp{
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 5px;
+      }
+      
+      .firstlitext{
+        color: white;
+      }
+      
+    
+      .unersembutton{
+        background-color:#08143d; 
+        color:white;
+        font-size: 12px;
+        padding-left: 2px;
+        padding-right: 2px;
+        text-decoration: none;
+       
+      }
+    
+      .textpartjoin{
+        text-align: center;
+      }
+      .textpartjointhirddiv{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0px;
+        
+      }
+      .joinseminerheaderptag{
+        display: none;
+      }
+    }
+    .fontsizefstli{
+      font-size: 15px;
+      font-weight: 300;
+    }
+    .fontsizefstlimon{
+      font-size: 12px;
+
+    }
+    .underpx{
+      padding-left: 0px;
+    }
+    .seminersubject{
+      font-size: 10px;
+    }
+    .seminersubjecth6{
+      font-size: 10px;
+    }
+    
+    
+    </style>
+
+
+
+
+
+
+    <style>
+      
+      .seminerjoinpart{
+        padding-top: 200px;
+        padding: 100px;
+        padding-left: 0px;
+        padding-right: 0px;
+        
+      }
+      
+      
+        .fisrsth1{
+          font-size: 65px;
+          color: white;
+          padding-left: 50px;
+          font-weight: 700;
+        }
+
+      
+
+      .joinsecondbody{
+        background: linear-gradient(to left bottom, rgb(216, 211, 211), rgb(59, 59, 59),rgb(139, 25, 139), );
+        border-radius: 25px;
+      }
+      
+      .joinp{
+        font-size: 30px;
+        padding-bottom: 25px;
+        color: white;
+      }
+      
+
+      .textfirstdiv{
+        padding: 50px;
+        padding-top: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+     
+
+      .firstli{
+        display: -webkit-box; 
+        width: 600px;
+        background-color: #4c4e9c;
+        border: none;
+        
+      }
+     
+      
+      .firstli:hover{
+        display: -webkit-box; 
+        width: 600px;
+        background: linear-gradient( to left bottom, rgba(99, 31, 93, 0.849),rgba(11, 90, 121, 0.767));
+        border: none;
+        
+      }
+      
+      
+      .underdiv{
+        border-radius: 10px; 
+        width: 450px;
+        background-color: #16263a;
+      }
+      .underdivbutton{
+        padding-left: 100px; 
+        padding-top: 10px;
+        background-color: 2px solid #08143d ;
+      }
+      .seminerimgdiv{
+        padding-top: 50px;
+        padding-left: 50px;
+      }
+      .seminerimg{
+        border-radius: 30px;
+        height: 500px; 
+        width: 95%;
+      }
+      
+      .unersembutton{
+        width: 90px;
+        border: 2px rgb(55, 38, 100);
+      }
+      
+      .seminerholebutton{
+        padding-top: 30px;
+      }
+      .semminerbutton{
+        border-radius: 20px;
+        border: 3px solid rgb(55, 38, 100);
+        height: 65px;
+        width: 300px;
+        color: white;
+        
+      }
+      .semminerbutton:hover{
+        background: linear-gradient(to left bottom,#2297ce,rgb(35, 35, 175));
+          color: black;
+          border: none;
+      }
+      .seminerbuttonp{
+        font-size: 22px;
+        font-weight: 600;
+      }
+      
+      .firstlitext{
+        color: white;
+      }
+      
+      
+      
+      
+      .unersembutton{
+        background-color:#08143d; 
+        color:white;
+        
+      }
+      .unersembutton:hover{
+        background-color:#2142ac; 
+        color:white;
+      }
+      .textpartjoin{
+        text-align: center;
+      }
+      .textpartjointhirddiv{
+        padding-left: 150px;
+        padding-right: 150px;
+        padding-top: 50px;
+      }
+      .joinseminerheaderptag{
+        font-size: 25px;
+        color: white;
+      }
+
+      .fontsizefstli{
+        font-size: 30px;
+        font-weight: 600;
+      }
+      .fontsizefstlimon{
+        font-size: 22px;
+      }
+      .underpx{
+        padding-left: 0px;
+      }
+      .seminersubject{
+        font-size: 22px;
+      }
+      .seminersubjecth6{
+        font-size: 20px;
+      }
+      </style>
+
 <div class="seminerjoinpart">
   
    <div class="textpartjoin">
@@ -356,24 +824,24 @@
   <div class="d-flex joinsecondbody" >
     
     <!-- text part  -->
-   
+  
     <div class="col-5 textfirstdiv"> 
       {% for seminer in seminer_time %}
       <ul class="list-group pb-2 pt-4 joinseminerul">
         <li class="list-group-item firstli" aria-current="true">
           <div class="firstlitext">
-            <h3 class="px-3"> {{seminer.day}} </h3>
-            <span><h5>{{seminer.month_Year}}</h5></span>
+            <h3 class="px-3 fontsizefstli"> {{seminer.day}} </h3>
+            <span><h5 class="fontsizefstlimon">{{seminer.month_Year}}</h5></span>
           </div>
-          <div class="px-3 ">
+          <div class="px-3 underpx ">
             <div class="px-3 bg-body-secondary pt-1 underdiv ">
               <div class="pt-2 d-flex ">
                 <div class="">
-                  <h5 class="">{{seminer.seminer_subject}}</h5>
-                  <h6>{{seminer.seminer_time}}</h6>
+                  <h5 class="seminersubject">{{seminer.seminer_subject}}</h5>
+                  <h6 class="seminersubjecth6">{{seminer.seminer_time}}</h6>
                 </div>
                 <div class="underdivbutton">
-                  <a type="button" class="btn btn-success unersembutton"  >Join</a>
+                  <a type="button" class=" btn unersembutton"  >Join</a>
                 </div>
               </div>
             </div>

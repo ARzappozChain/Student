@@ -15,7 +15,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+BASE_URL = 'http://127.0.0.1:8000'
 
+ 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -26,6 +28,9 @@ SECRET_KEY = 'django-insecure-5&u)mh%c=v-cq-#@#54&lz7(bh*!p6w+pbqu)=j4@fl)tfx6m^
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# settings.py
+AUTH_USER_MODEL = 'Login_Logout.User'
+
 
 
 # Application definition
@@ -41,7 +46,17 @@ INSTALLED_APPS = [
     'Deshboard',
     'HomePage',
     'Home_Page_Two',
+    'Login_Logout',
+     "crispy_forms",
+    "crispy_bootstrap5",
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

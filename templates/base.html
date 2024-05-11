@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Managment</title>
     <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -63,11 +65,29 @@
   padding-right: 50px;
   
 }
+.logindiv{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  
+}
   
 .transletbtn{
   padding-top: 17px;
 
 }
+
+
+.transletbtn2{
+  padding-top: 12px;
+  padding-left: 30px;
+}
+
+.noti1{
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
 
 .border-white{
   padding-right:20px; 
@@ -101,11 +121,38 @@
 .numemail{
   padding-left: 80px;
 }
-.btn{
+.headerbtn{
   color: white;
+}
+.notific{
+  height: 40px;
+  width: 40px;
+}
+.logindiv2{
+  padding-top: 5px;
+  color: white;
+  
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.profileimagenav{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+ 
+}
+.profileimagenavdiv{
+  padding-top: 10px;
+  padding-left: 40px;
+  
 }
 </style>
   
+<style>
+  @media only screen and (max-width: 450px){
+    
+  }
+</style>
 
 <div class="container-fluid sticky-top px-0 ">
   
@@ -126,24 +173,216 @@
                      <p class="text-white scrolling-text"> {{navbarText.Text}} </p>
                     </div>
                 </div>
-                <div class="d-flex logoutdiv">
-                    <div class="gap-5">
-                        <a href="" class="btn logout"><h4>Login</h4></a>
+                {% if request.user.is_authenticated %}
+                  <div class="d-flex logoutdiv">
+                    <div class=" noti1">
+                      <a href="" ><img src="{% static 'socialmedia/noti1.png' %}" alt="" class="notific"></a>
                     </div>
-                    <div class="transletbtn">
-                        <a href="" class="btn"><h4>Register</h4></a>
+                    <div class=" transletbtn2">
+                      <a href="" ><img src="{% static 'socialmedia/translet.png' %}" alt=""  class="translethed"></a>
+                  </div>
+                    <div id="toggleImage" class="profileimagenavdiv">
+                      <img src="{% static 'socialmedia/pro.png' %}" alt="" class="profileimagenav">
                     </div>
-                    <div class="transletbtn">
-                        <a href="" ><img src="{% static 'socialmedia/translet.png' %}" alt=""></a>
-                    </div>
+                    
+                  </div>
+                 
+
+              {% else %}
+                <div class="d-flex gap-4 logindiv">
+                  <div class=" logindiv2 pt-2">
+                      <a href="{% url 'loginpage' %} " class=" loginurl text-white" style=" text-decoration: none; padding-top:5px;" ><h4 >Login</h4></a>
+                  </div>
+                  <div class=" pt-2">
+                      <a href="{% url 'Registerpage' %}" class=" text-white" style=" text-decoration: none; padding-top:5px;" ><h4>Register</h4></a>
+                  </div>
+                  <div class=" gap-5">
+                      <a href="" ><img src="{% static 'socialmedia/translet.png' %}" alt=""></a>
+                  </div>
                 </div>
+
+              {% endif %}
+                
             </div>
         </div>
     </div>
 </div>
 
+<!-- dropdow  -->
+
+<style>
+  .hideprofile{
+    
+    width: 400px;
+    background-color: rgb(62, 76, 124);
+    flex-wrap: wrap;
+    top: 72px; 
+    right: 8%; 
+    display: none;
+    position: fixed;
+    z-index: 999;
+    border-radius: 10px;
+    
 
 
+  }
+
+
+.profileimage{
+  height: 100px;
+  width:100px ;
+}
+.hideprofilediv2{
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+}
+.imagedivhide{
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+.namehidden{
+  padding-top: 5px;
+}
+
+.viewProfile{
+  background-color:  rgb(76, 94, 150);
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-radius: 40px;
+  padding-left: 30px;
+  font-weight: 700;
+  color: white;
+ text-decoration: none;
+}
+.viewProfilediv{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.viewProfilea{
+  text-decoration: none;
+
+}
+.bottommergin{
+  
+  border: 1px solid gray;
+}
+.hiddendivsecond{
+  
+  padding-right: 10px;
+  
+}
+
+.profilediv2{
+  padding-bottom: 50px;
+}
+
+.textdec{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+
+}
+
+
+.textdec:hover{
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+
+}
+
+.textdictdiv{
+  padding-left: 25px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+
+</style>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var toggleImage = document.getElementById('toggleImage');
+      var profileDiv = document.getElementById('profileDiv');
+
+      // Toggle profile section when clicking on the image
+      toggleImage.addEventListener('click', function(e) {
+          e.stopPropagation(); // Prevent event bubbling
+          if (profileDiv.style.display === 'block') {
+              profileDiv.style.display = 'none';
+          } else {
+              profileDiv.style.display = 'block';
+          }
+      });
+
+      // Hide profile section when clicking outside of it
+      document.addEventListener('click', function(e) {
+          var targetElement = e.target;
+          if (targetElement !== toggleImage && !profileDiv.contains(targetElement)) {
+              profileDiv.style.display = 'none';
+          }
+      });
+  });
+</script>
+
+
+
+
+<div class="hideprofile" id="profileDiv">
+  <div class="profilediv2">
+    <div class="hideprofilediv2">
+      <div class="imagedivhide">
+        <a href="" ><img src="{% static 'socialmedia/pro.png' %}" alt="" class="profileimage"></a>
+          <h4 class="namehidden text-white">Name: Ashik</h4>
+          <h5 class="pt-2 text-white">Student ID: 616516161511</h5>
+          <div class="viewProfilediv">
+              <a href="#" class="viewProfilea"><h2 class="viewProfile">View Profile</h2></a>
+          </div>
+          <p class="bottommergin"></p>
+      </div>
+  </div>
+  <!-- text site -->
+  <div class='hiddendivsecond'>
+    <div class="textdictdiv">
+      <a href="" class="textdec"><h3>Bookmark</h3></a>
+    </div>
+    <div class="textdictdiv">
+      <a href="" class="textdec"><h3>Referral Link</h3></a>
+    </div>
+    <div class="textdictdiv">
+      <a href="" class="textdec"><h3>Announcement</h3></a>
+    </div>
+    <div class="textdictdiv">
+      <a href="" class="textdec"><h3>Course Overview</h3></a>
+    </div>
+    <div class="textdictdiv">
+      <a href="{% url 'logoutpage' %}" class="textdec"><h3>Logout</h3></a>
+    </div>
+     
+      
+      
+      
+      
+      
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- second div code -->
 
 <style>
     .scrolling-text {
@@ -201,7 +440,7 @@
                 </div>
                 <div class="d-lg-none"> <!-- This div will be hidden on lg screens -->
                   <a href="" class="nav-item nav-link nabtextcolor"><h4>Login</h4></a>
-                  <a href="" class="nav-item nav-link nabtextcolor"><h4>Register</h4></a>
+                  <a href="{% url 'Registerpage' %}" class="nav-item nav-link nabtextcolor"><h4>Register</h4></a>
                   
               </div>
             </div>
@@ -210,6 +449,33 @@
     </div>
   </div>
 </div>
+
+
+
+<!-- whatsup -->
+
+
+  <a href="https://wa.me/01403226133">
+    <img src="{% static 'socialmedia/wha.png' %}" class="whats" alt="">
+  </a>
+
+<style>
+  .whats{
+    position:fixed;
+    width:120px;
+    height:106px;
+    bottom:60px;
+    right:40px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  
+  .my-float{
+    margin-top:16px;
+  }
+</style>
+
         
       {% block blockname %}
         
@@ -419,9 +685,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <!-- Translet js code  -->
-
-
- 
 
 
   

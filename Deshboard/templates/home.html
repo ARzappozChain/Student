@@ -1,5 +1,9 @@
 {% extends "base.html" %} {% load static %} {% load embed_video_tags %} {% block blockname %}
 
+{% if messages %} 
+{% for i in messages %}
+<h4>{{i}}</h4>
+{% endfor %} {% endif %}
 
 <!-- all css code  -->
 
